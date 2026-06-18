@@ -1,0 +1,137 @@
+﻿<Application x:Class="WpfAppProyectoProyecto3A.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WpfAppProyectoProyecto3A"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <!-- Fondo vacacional -->
+        <ImageBrush x:Key="FondoTotal" ImageSource="/images/proyectoaeropuerto.jpg"/>
+
+        <!-- Overlay semitransparente para resaltar controles -->
+        <LinearGradientBrush x:Key="FondoOverlay" StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#80FFFFFF" Offset="0"/>
+            <GradientStop Color="#80FFFFFF" Offset="1"/>
+        </LinearGradientBrush>
+
+        <!-- Fuente caligráfica -->
+        <FontFamily x:Key="TipografiaManuscrita">Segoe Script</FontFamily>
+
+        <!-- Labels -->
+        <Style TargetType="Label">
+            <Setter Property="FontFamily" Value="{StaticResource TipografiaManuscrita}"/>
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect Color="Black" BlurRadius="4" ShadowDepth="2"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- TextBox -->
+        <Style TargetType="TextBox">
+            <Setter Property="FontFamily" Value="{StaticResource TipografiaManuscrita}"/>
+            <Setter Property="FontSize" Value="22"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Width" Value="250"/>
+            <Setter Property="Background" Value="#FFFFFAF0"/>
+            <Setter Property="BorderBrush" Value="#FF56CCF2"/>
+            <Setter Property="BorderThickness" Value="2"/>
+        </Style>
+
+        <!-- PasswordBox -->
+        <Style TargetType="PasswordBox">
+            <Setter Property="FontFamily" Value="{StaticResource TipografiaManuscrita}"/>
+            <Setter Property="FontSize" Value="22"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Width" Value="250"/>
+            <Setter Property="Background" Value="#FFFFFAF0"/>
+            <Setter Property="BorderBrush" Value="#FF56CCF2"/>
+            <Setter Property="BorderThickness" Value="2"/>
+        </Style>
+
+        <!-- Botones -->
+        <Style TargetType="Button">
+            <Setter Property="FontFamily" Value="{StaticResource TipografiaManuscrita}"/>
+            <Setter Property="FontSize" Value="22"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="Width" Value="160"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#FF56CCF2" Offset="0"/>
+                        <GradientStop Color="#FF2F80ED" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                                CornerRadius="25"
+                                BorderBrush="White"
+                                BorderThickness="1">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background">
+                        <Setter.Value>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                <GradientStop Color="#FF6DD5FA" Offset="0"/>
+                                <GradientStop Color="#FF56CCF2" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <!-- ComboBox -->
+        <Style TargetType="ComboBox">
+            <Setter Property="FontFamily" Value="{StaticResource TipografiaManuscrita}"/>
+            <Setter Property="FontSize" Value="22"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Width" Value="250"/>
+            <Setter Property="Background" Value="#FFFFFAF0"/>
+            <Setter Property="BorderBrush" Value="#FF56CCF2"/>
+            <Setter Property="BorderThickness" Value="2"/>
+        </Style>
+
+        <!-- RadioButton -->
+        <Style TargetType="RadioButton">
+            <Setter Property="FontFamily" Value="{StaticResource TipografiaManuscrita}"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+
+        <!-- DataGrid -->
+        <Style TargetType="DataGrid">
+            <Setter Property="FontFamily" Value="{StaticResource TipografiaManuscrita}"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="RowBackground" Value="#FFFDEBD0"/>
+            <Setter Property="AlternatingRowBackground" Value="#FFFBC186"/>
+            <Setter Property="GridLinesVisibility" Value="Horizontal"/>
+            <Setter Property="HorizontalGridLinesBrush" Value="#FFFAA633"/>
+            <Setter Property="VerticalGridLinesBrush" Value="#FFFAA633"/>
+            <Setter Property="BorderBrush" Value="#FFFAA633"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Foreground" Value="Black"/>
+        </Style>
+    </Application.Resources>
+</Application>
